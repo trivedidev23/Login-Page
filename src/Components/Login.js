@@ -29,7 +29,8 @@ const Login = () => {
       (email === email2 && password === password2)
     ) {
       setIsAuthenticated(true);
-      console.log(isAuthenticated);
+    } else {
+      alert("Wrong Credentials");
     }
   };
 
