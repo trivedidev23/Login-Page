@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Fragment } from "react";
+import "./tablystyle.css";
 
 const HomeScreen = () => {
   const [users, setUsers] = useState([]);
@@ -13,18 +15,26 @@ const HomeScreen = () => {
   }, []);
   console.log(users);
   return (
-    <div className="container">
-      {users &&
-        users.map((user) => {
-          return (
-            <div key={user.id}>
-              <img src={user.avatar} alt={user.first_name} />
-              <h1>
-                {user.first_name} {user.last_name}
-              </h1>
-            </div>
-          );
-        })}
+    <div className="container" style={{ marginTop: "30px" }}>
+      <Fragment>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Email</th>
+          </tr>
+          {users &&
+            users.map((user) => {
+              return (
+                <tr>
+                  <td>{user.first_name}</td>
+                  <td>{user.last_name}</td>
+                  <td>{user.email}</td>
+                </tr>
+              );
+            })}
+        </table>
+      </Fragment>
     </div>
   );
 };
