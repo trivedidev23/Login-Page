@@ -8,8 +8,8 @@ const App = () => {
     <Fragment>
       <BrowserRouter>
         <Routes>
-          <Route exact path="/login" element={<Login />} />
-          <Route path="/" element={<HomeScreen />} />
+          <Route exact path="/" element={<Login />} />
+          <Route path="/home" element={<HomeScreen />} />
         </Routes>
       </BrowserRouter>
     </Fragment>

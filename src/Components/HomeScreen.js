@@ -13,7 +13,7 @@ const HomeScreen = () => {
     };
     fetchData();
   }, []);
-  console.log(users);
+
   return (
     <div className="container" style={{ marginTop: "30px" }}>
       <Fragment>
